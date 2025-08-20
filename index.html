@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yousef Ramy Saad - Web Developer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <style>
+      :root {
+        --primary-color: #4e54c8;
+        --secondary-color: #8f94fb;
+        --dark-color: #1a1a2e;
+        --light-color: #f8f9fa;
+        --accent-color: #ff6b6b;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+        scroll-behavior: smooth;
+      }
+
+      .navbar {
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+
+      .nav-link {
+        font-weight: 500;
+        margin: 0 10px;
+        color: var(--dark-color);
+      }
+
+      .nav-link:hover {
+        color: var(--primary-color);
+      }
+
+      .hero {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--secondary-color) 100%
+        );
+        color: white;
+        padding: 120px 0 100px;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      }
+
+      .section-title {
+        position: relative;
+        margin-bottom: 40px;
+        font-weight: 700;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(
+          to right,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+      }
+
+      .skill-bar {
+        background-color: #e9ecef;
+        border-radius: 4px;
+        margin-bottom: 15px;
+      }
+
+      .skill-progress {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--secondary-color) 100%
+        );
+        height: 8px;
+        border-radius: 4px;
+        transition: width 1s ease-in-out;
+      }
+
+      .experience-card {
+        border-left: 3px solid var(--primary-color);
+        padding-left: 20px;
+        margin-bottom: 30px;
+      }
+
+      .project-card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        height: 100%;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .contact-info {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--secondary-color) 100%
+        );
+        color: white;
+        padding: 50px;
+        border-radius: 10px;
+      }
+
+      footer {
+        background-color: var(--dark-color);
+        color: white;
+        padding: 30px 0;
+      }
+
+      .social-links a {
+        color: white;
+        font-size: 1.5rem;
+        margin-right: 15px;
+        transition: color 0.3s;
+      }
+
+      .social-links a:hover {
+        color: var(--accent-color);
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          padding: 80px 0 60px;
+        }
+
+        .contact-info {
+          padding: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Yousef Ramy Saad</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h1 class="display-4 fw-bold mb-3">
+              Front-End Developer & UI/UX Designer
+            </h1>
+            <p class="lead mb-4">
+              Specializing in Angular development with growing expertise in .NET
+              back-end. Passionate about creating digital solutions that combine
+              strong performance with engaging user experiences.
+            </p>
+            <a href="#contact" class="btn btn-light btn-lg px-4 py-2 me-3"
+              >Get in Touch</a
+            >
+            <a href="#projects" class="btn btn-outline-light btn-lg px-4 py-2"
+              >View Projects</a
+            >
+          </div>
+          <div class="col-lg-4 d-none d-lg-block">
+            <div class="text-center">
+              <div
+                style="
+                  background-color: rgba(255, 255, 255, 0.1);
+                  width: 300px;
+                  height: 300px;
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 0 auto;
+                "
+              >
+                <img
+                  style="width: 200px"
+                  src="./WhatsApp Image 2025-08-13 at 21.26.06_83560a63.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5" style="background-color: #f8f9fa">
+      <div class="container py-5">
+        <h2 class="section-title">About Me</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <p class="lead">
+              I'm a front-end developer specializing in Angular, currently
+              expanding my skills in back-end development using .NET. With
+              additional experience in UI/UX design, I bridge the gap between
+              development and design to deliver integrated applications.
+            </p>
+            <p>
+              I'm passionate about turning ideas into practical digital
+              solutions and always eager to improve my skills while staying
+              up-to-date with the latest technologies in web development.
+            </p>
+            <p>
+              Currently pursuing my Bachelor's degree in Information Technology
+              at Misr University for Science and Technology with a GPA of 3.56.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="card border-0 shadow">
+              <div class="card-body p-4">
+                <h5 class="card-title mb-4">Personal Details</h5>
+                <div class="row mb-3">
+                  <div class="col-sm-4"><strong>Email:</strong></div>
+                  <div class="col-sm-8">youseframy2252005@gmail.com</div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-4"><strong>Phone:</strong></div>
+                  <div class="col-sm-8">+201094261357</div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-4"><strong>Location:</strong></div>
+                  <div class="col-sm-8">Cairo, Egypt</div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-4"><strong>Languages:</strong></div>
+                  <div class="col-sm-8">
+                    Arabic (Native), English (A1), German (A1)
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4"><strong>Connect:</strong></div>
+                  <div class="col-sm-8">
+                    <a
+                      href="https://www.linkedin.com/in/youseframy-e13amed/"
+                      class="text-decoration-none me-3"
+                    >
+                      <i class="bi bi-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                      <i class="bi bi-behance"></i> Behance
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+      <div class="container py-5">
+        <h2 class="section-title">Professional Experience</h2>
+
+        <div class="experience-card">
+          <h4>UI/UX Design Internship</h4>
+          <h5 class="text-primary">National Telecommunication Institute</h5>
+          <p class="text-muted">2024</p>
+          <ul>
+            <li>
+              Led a design team to deliver responsive web and mobile prototypes
+              with a user-centered approach
+            </li>
+            <li>
+              Demonstrated strong passion for crafting unique user experiences,
+              blending creativity with attention to detail
+            </li>
+            <li>
+              Created wireframes, mockups, and interactive designs improving
+              usability and visual consistency
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience-card">
+          <h4>Full-Stack Development Training</h4>
+          <h5 class="text-primary">Route Academy</h5>
+          <p class="text-muted">2024</p>
+          <ul>
+            <li>
+              Gained practical experience in Front-End Development using Angular
+              to build dynamic web applications
+            </li>
+            <li>
+              Worked extensively with CSS, Sass, Bootstrap, and Tailwind CSS to
+              design modern interfaces
+            </li>
+            <li>
+              Currently training in Back-End Development with .NET, focusing on
+              scalable applications
+            </li>
+            <li>
+              Collaborated on team projects simulating real-world industry
+              practices
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience-card">
+          <h4>IT Summer Intern</h4>
+          <h5 class="text-primary">Samcreate Building Systems (SBS)</h5>
+          <p class="text-muted">Summer 2023</p>
+          <ul>
+            <li>
+              Completed summer training program in the Information Technology
+              Department
+            </li>
+            <li>
+              Gained exposure to IT operations within a leading construction
+              company
+            </li>
+            <li>
+              Assisted in daily departmental activities, contributing to
+              technology integration
+            </li>
+            <li>
+              Developed understanding of how IT supports organizational
+              efficiency
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience-card">
+          <h4>HCIA-AI V3.5 Certified</h4>
+          <h5 class="text-primary">Huawei ICT Academy</h5>
+          <p class="text-muted">2023</p>
+          <ul>
+            <li>
+              Acquired hands-on expertise in AI fundamentals including Machine
+              Learning and Deep Learning
+            </li>
+            <li>
+              Gained practical experience in data preprocessing and model
+              training using Python
+            </li>
+            <li>
+              Implemented small-scale AI projects applying solutions to
+              real-world problems
+            </li>
+            <li>
+              Strengthened problem-solving and analytical thinking through case
+              studies
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5" style="background-color: #f8f9fa">
+      <div class="container py-5">
+        <h2 class="section-title">Projects</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card card h-100 border-0">
+              <div class="card-body">
+                <h5 class="card-title">Waste Detection System</h5>
+                <p class="card-text">
+                  Developed advanced waste detection system using YOLOv8-v11 to
+                  identify 22 waste material types including cans and plastic.
+                </p>
+                <div class="mb-3">
+                  <span class="badge bg-primary">AI</span>
+                  <span class="badge bg-primary">Python</span>
+                  <span class="badge bg-primary">Computer Vision</span>
+                </div>
+                <a href="#" class="btn btn-outline-primary">View App</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card card h-100 border-0">
+              <div class="card-body">
+                <h5 class="card-title">Angular Web Application</h5>
+                <p class="card-text">
+                  A responsive web application built with Angular, featuring
+                  modern UI components and seamless user experience.
+                </p>
+                <div class="mb-3">
+                  <span class="badge bg-primary">Angular</span>
+                  <span class="badge bg-primary">TypeScript</span>
+                  <span class="badge bg-primary">Bootstrap</span>
+                </div>
+                <a href="#" class="btn btn-outline-primary">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card card h-100 border-0">
+              <div class="card-body">
+                <h5 class="card-title">UI/UX Design Portfolio</h5>
+                <p class="card-text">
+                  Collection of responsive web and mobile prototypes designed
+                  with a user-centered approach and interactive elements.
+                </p>
+                <div class="mb-3">
+                  <span class="badge bg-primary">Figma</span>
+                  <span class="badge bg-primary">UI/UX</span>
+                  <span class="badge bg-primary">Prototyping</span>
+                </div>
+                <a href="#" class="btn btn-outline-primary">View Designs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+      <div class="container py-5">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class="mb-4">Technical Skills</h4>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <h6>Angular</h6>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <h6>HTML/CSS</h6>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <h6>JavaScript/TypeScript</h6>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <h6>Bootstrap/Tailwind</h6>
+                <span>88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 88%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <h4 class="mb-4">Additional Skills</h4>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <h6>UI/UX Design (Figma)</h6>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <h6>.NET (Learning)</h6>
+                <span>40%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 40%"></div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <h6>Python</h6>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <h6>MySQL</h6>
+                <span>65%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <h4 class="mb-4">Soft Skills</h4>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge bg-light text-dark p-2">Problem Solving</span>
+            <span class="badge bg-light text-dark p-2">Teamwork</span>
+            <span class="badge bg-light text-dark p-2">Communication</span>
+            <span class="badge bg-light text-dark p-2">Adaptability</span>
+            <span class="badge bg-light text-dark p-2">Time Management</span>
+            <span class="badge bg-light text-dark p-2">Creativity</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5" style="background-color: #f8f9fa">
+      <div class="container py-5">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="contact-info">
+              <h3 class="mb-4">Let's Work Together</h3>
+              <p class="mb-4">
+                I'm currently available for freelance work and open to full-time
+                opportunities. Feel free to reach out if you have a project in
+                mind or just want to connect!
+              </p>
+              <div class="mb-4">
+                <p>
+                  <i class="bi bi-envelope me-2"></i>
+                  youseframy2252005@gmail.com
+                </p>
+                <p><i class="bi bi-phone me-2"></i> +201094261357</p>
+                <p><i class="bi bi-geo-alt me-2"></i> Cairo, Egypt</p>
+              </div>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/youseframy-e13amed/"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+                <a href="#"><i class="bi bi-behance"></i></a>
+                <a href="#"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p>&copy; 2023 Yousef Ramy Saad. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/youseframy-e13amed/"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a href="#"><i class="bi bi-behance"></i></a>
+          <a href="#"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Simple animation for skill bars
+      document.addEventListener("DOMContentLoaded", function () {
+        const skillBars = document.querySelectorAll(".skill-progress");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const width = entry.target.style.width;
+                entry.target.style.width = "0";
+                setTimeout(() => {
+                  entry.target.style.width = width;
+                }, 100);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        skillBars.forEach((bar) => {
+          observer.observe(bar);
+        });
+      });
+    </script>
+  </body>
+</html>
